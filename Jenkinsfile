@@ -14,13 +14,14 @@ pipeline {
                         '''
                     }
                 }
+            }
         stage('terraformValidate'){
-            steps{
+            steps {
                 sh 'terraform init'
                 sh 'terraform validate'
             }
         }
-            }
+            
         }
     }
 }
